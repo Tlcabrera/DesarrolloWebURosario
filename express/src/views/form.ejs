@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <header>
+        <h1><strong><em><center>Formularios</center></em></strong></h1>
+    </header>
+    <form name="formulario" action="/contactenos" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br><br>
+        <label for="password">Password:</label>
+        <input name="password" id="password" type="password" placeholder="Ingresar Password" pattern="( ?=.* [ 0 - 9 ] ) ( ?=.* [ a - z ] ) ( ?=.* [ A - Z ] ) ( ?=.* [ *.!@ $% ^& ( ) { } [ ] :;<>,.?/~ _ +-=| \ ] ) . { 8 , 32 } $"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" required></textarea>
+        <br><br>
+         <!--Control type:radio-->
+        <label for="ecivil">Ingrese su estado civil: </label>
+        <input name="ecivil" id="ecivil"  type="radio"checked>Soltero
+        <input name="ecivil" id="ecivil" type="radio">Casado
+        <input name="ecivil" id="ecivil" type="radio">Union Libre
+        <input name="ecivil" id="ecivil" type="radio">Divorciado
+        <input name="ecivil" id="ecivil" type="radio">En una relación
+        <br><br>
+        <!--Control type:checkbox-->
+        <label for="deporte">¿Qué le gusta hacer en su tiempo libre?</label>
+        <input name="deporte" id="deporte" type="checkbox" checked>Fútbol
+        <input name="deporte" id="deporte" type="checkbox">Baloncesto
+        <input name="deporte" id="deporte" type="checkbox">Volleyball
+        <input name="deporte" id="deporte" type="checkbox">Natación
+        <br><br>
+        <!--Control type:number-->
+        <label for="edad">Ingresa tu edad: </label>
+        <input name="edad" id="edad" type="number" placeholder="Ingresar Edad" step="4"> 
+        <br><br>
+        <!--Control type:select-->
+        <label for="ciudad">¿En qué ciudad vives?</label>
+        <select name="ciudad" id="ciudad">
+            <option value="0" selected>Elige una ciudad</option>
+            <option value="1">Bogotá</option>
+            <option value="2">Medellín</option>
+            <option value="3">Calí</option>
+            <option value="4">Bucaramanga</option>
+        </select>
+        <br><br>
+        <!--Control type:select optgroup-->
+        <label for="ciudad1">¿En qué ciudad vives?</label>
+        <select name="ciudad1" id="ciudad1">
+            <option value="0" selected>Elige una ciudad</option>
+            <optgroup label="Cundinamarca">
+            <option value="1">Bogotá</option>
+            <option value="2">Soacha</option>
+            <option value="3">Chia</option>
+            </optgroup>
+            <optgroup label="Antioquia">
+            <option value="4">Medellín</option>
+            <option value="5">Envigado</option>
+            </optgroup>
+            <optgroup label="Valle del Cauca">
+            <option value="6">Calí</option>
+            <option value="7">Buga</option>
+            </optgroup>
+            <optgroup label="Santander">
+            <option value="8">Bucaramanga</option>
+            <option value="9">Florida Blanca</option>
+        </optgroup>
+        </select>
+        <!--Control type:hidden-->
+        <br><br>
+        <input type="hidden" name="dato_oculto">
+        <br><br>
+        <!--Control type:file-->
+        <label for="file">Sube aquí tu archivo:</label>
+        <input type="file" name="file" id="file" required="required">
+        <br><br>
+        <!--Control type:text tarea-->
+        <label for="observaciones">Observaciones:</label>
+        <textarea rows="5" cols="30" name="observaciones"></textarea>
+        <br><br>
+        <!--Control type:search-->
+        <label for="buscar">Digita el dato a buscar:</label>
+        <input type="search" id="buscar" name="buscar"
+            placeholder="Buscar...">
+        <input type="submit" value="Ir">
+        <br><br>
+        <!--Control type:email-->
+        <label for="email">Ingresa el correo electrónico:</label>
+        <input type="email" id="email" name="email" pattern="[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$">
+        <br><br>
+        <!--Control type:color-->
+        <label for="colorl" align="center">Seleccione un color:</label>
+        <input type="color" id="color" name="color">
+        <br><br>
+        <!--Control type:dater-->
+        <label for="date">Ingrese fecha de nacimiento:</label>
+        <input type="date" id="date" name="date" min="2000-01-01" max="2022-01-01">
+        <br><br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Borrar">
+        <button type="submit">Guardar</button>
+        <br>
+        <br>
+        
+        <label for="time"><span>Hora</span>
+        <input type="time" name="time" id="time">
+        </label>
+        <br>
+        <br>
+        
+        <label for="day"><span>Día</span>
+        <input type="date" name="date" id="date">
+        </label>
+
+        <br>
+        <br>
+        
+        <label for="week">Semana
+        <input type="week" name="week" id="week">
+        </label>
+        <br>
+        <br>
+        
+        <label for="month"><span>Mes</span>
+        <input type="month" name="month" id="month">
+        </label>
+
+        <br>
+        <br>
+        <label>Califique su experiencia:</label>
+        <input type="range" min="1" max="50" step="1" value="1">
+        <br><br>
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="123-45-678">
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

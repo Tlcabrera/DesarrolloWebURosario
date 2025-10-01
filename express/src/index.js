@@ -1,5 +1,8 @@
 
 import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
 //const express = require('express');
 
 //inicializamos express
@@ -13,7 +16,10 @@ app.set('view engine', 'ejs');
 app.set('views', './src/views');
 
 //middleware para archivos estáticos
-app.use(express.static(path.join(__dirname, 'public')));
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+app.use(express.static(path.join(__dirname, "../public")));
+
 
 // //ruta de ejemplo
 // app.get('/', (req, res) => {
@@ -23,6 +29,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 //ruta de ejemplo con EJS
 app.get('/', (req, res) => {
   res.render('index', { titulo: 'Bienvenido a mi proyecto con express' });
+});
+
+app.get('/stop', (req, res) => {
+  res.render('stop', { titulo: 'Stop' });
+});
+
+app.get('/contactenos', (req, res) => {
+  res.render('form');
 });
 
 app.listen(PORT, () => {
