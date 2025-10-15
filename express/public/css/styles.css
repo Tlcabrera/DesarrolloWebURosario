@@ -66,3 +66,59 @@ list-style-position: inside;
 width: 1px;
 }
 
+.azul{
+color: blue;
+}
+.rojo{
+color: red;
+}
+#titulo6{ 
+    color  : #15a085;
+    font-size: 20px;
+    text-align: right
+}
+
+.homero{
+font-style: italic;
+text-decoration:underline ;
+color:#FCFC34;
+}
+
+.esopo{
+width:800px; 
+background-color:#15A085; 
+color:#FFFFFF;
+}
+
+.personaje{
+	width: 1000px;
+	background: linear-gradient(#F9A9FB,#F9D3FA);
+	margin: 20px 0px;
+	padding: 30px 30px;
+	box-shadow: 3px 3px 7px #999999;
+	font-family: 'Muli', sans-serif;
+
+}
+
+.personaje img{
+	width: 110px;
+	border: 7px solid #FFFFFF;
+	border-radius: 50%;
+	float: left;
+	margin-right: 20px;
+
+}
+.personaje img:hover{
+
+
+}
+.personaje h2{
+	color: #FFFFFF;
+	text-shadow: 2px 2px 4px #000000;
+
+}
+
+.personaje p{
+	text-align: justify;
+}
+

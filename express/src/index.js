@@ -38,6 +38,8 @@ app.get('/stop', (req, res) => {
 app.get('/contactenos', (req, res) => {
   res.render('form');
 });
+app.get("/home", (req, res) => res.render("home"));
+app.get("/portafolio", (req, res) => res.render("portafolio"));
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
