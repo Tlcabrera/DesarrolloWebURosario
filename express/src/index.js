@@ -40,6 +40,7 @@ app.get('/contactenos', (req, res) => {
 });
 app.get("/home", (req, res) => res.render("home"));
 app.get("/portafolio", (req, res) => res.render("portafolio"));
+app.get("/contact", (req, res) => res.render("contact"));
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
